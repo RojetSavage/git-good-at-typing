@@ -1,26 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import {MenuContextProvider} from './contexts/MenuContextProvider';
+import {ThemeContextProvider} from './contexts/ThemeContextProvider';
+import {HomepageGreeting, Navbar, Sidebar, MainContent } from './components/'
+import createLevelRoutes from './utility/createLevelRoutes';
 
-function App() {
+export default function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+        <MenuContextProvider>
+          <ThemeContextProvider>
+            <Navbar />
+            <Sidebar />
+              <Routes>
+                <Route path="/" element={<HomepageGreeting />}></Route>
+                { createLevelRoutes() }
+              </Routes>
+          </ThemeContextProvider>
+        </MenuContextProvider>
+      </BrowserRouter>
+    </>
   );
 }
 
-export default App;
+
+
+
