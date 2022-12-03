@@ -17,6 +17,7 @@ const useNewLevel = (levelName: string) => {
 	const {levelWords} = useTextGenerator(levelName)
 	let { pathname } = useLocation()
 
+	
 	//On every render change the testing text
 	useEffect(() => {
 		if (levelWords) {
