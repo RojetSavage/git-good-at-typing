@@ -19,7 +19,7 @@ const useTextGenerator = (levelName: string) => {
 			url: 'https://random-words5.p.rapidapi.com/getMultipleRandom',
 			params: {count: '20'},
 			headers: {
-			  'X-RapidAPI-Key': 'd7c8c9f6c4msh4c0de2cc7495514p13567cjsnd47a0cecd4a8',
+			  'X-RapidAPI-Key': process.env.REACT_APP_RANDOM_WORDS_API_KEY,
 			  'X-RapidAPI-Host': 'random-words5.p.rapidapi.com'
 			}
 		  };
@@ -35,7 +35,7 @@ const useTextGenerator = (levelName: string) => {
 			method: 'GET',
 			url: 'https://lorem-ipsum-by-api-ninjas.p.rapidapi.com/v1/loremipsum',
 			headers: {
-			  'X-RapidAPI-Key': 'd7c8c9f6c4msh4c0de2cc7495514p13567cjsnd47a0cecd4a8',
+			  'X-RapidAPI-Key': process.env.REACT_APP_LOREM_API_KEY,
 			  'X-RapidAPI-Host': 'lorem-ipsum-by-api-ninjas.p.rapidapi.com'
 			}
 		  };
