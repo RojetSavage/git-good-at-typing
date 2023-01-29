@@ -8,7 +8,9 @@ const HomepageGreeting = () => {
 	<>
 	{ menuState.badges ? <Badges /> : null}
 	{ menuState.options ? <Options /> : null}
-
+		<div className="flex items-center justify-center text-black dark:text-white bg-lightBackground dark:bg-darkBackground bg-cover bg-fixed">
+			Homepage Greeting
+		</div>
 	</>
   )
 }

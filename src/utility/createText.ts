@@ -1,8 +1,0 @@
-const createRandomText = () => {
-	
-
-}
-
-export {
-	createRandomText
-}

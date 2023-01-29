@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+body {
+  font-family: 'Patrick Hand', cursive;
+  background-color: #D5C5C8;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%239fa1a2' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23d67b89' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23867b7f' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23d7838b' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%2389747b' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%23e9a0a6' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%239f5861' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23efb0b3' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%236b5058' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%23edb3b3' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23624d53' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23f5cac9' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover; 
+}
+
+textarea {
+  background-color: #D5C5C8;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%239fa1a2' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23d67b89' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23867b7f' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23d7838b' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%2389747b' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%23e9a0a6' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%239f5861' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23efb0b3' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%236b5058' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%23edb3b3' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23624d53' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23f5cac9' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+nav {
+  background-color: #FFDBDA;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+  height: 15px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 100vh;
+  background: #f7f4ed;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e0cbcb;
+  border-radius: 100vh;
+  border: 3px solid #f6f7ed;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c0a0b9;
+}
+
+.dark {
+  background-image: url("../public/darkBackground.svg");
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+
+
+.loader {
+  position: absolute;
+  top:40vh;
+  left: 50vw;
+  background-image: url("../public/lightBackground.svg");
+  border: 20px solid #EAF0F6;
+  border-radius: 50%;
+  border-top: 20px solid #DB7F8E;
+  width: 100px;
+  height: 100px;
+  animation: spinner 4s linear infinite;
+}
+
+.dark .loader{
+  background-image: url("../public/darkBackground.svg");
+  border: 20px solid #2F4562;
+  border-top: 20px solid #248071;
+}
+
+
+@keyframes spinner {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+
+
+}
